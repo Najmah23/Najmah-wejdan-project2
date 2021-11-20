@@ -1,12 +1,13 @@
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import styles from "./Goble.module.css"
 
 function NavbarItem() {
   return (
     <Navbar bg="light" expand={false}>
       <Container fluid>
         <div>
-          <h1>MAKEUP</h1>
+          <h1 className={styles.logo}>MAKEUP</h1>
         </div>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
