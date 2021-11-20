@@ -27,7 +27,7 @@ function App() {
       console.log(error?.response?.data)
     }
   }
-  useEffect(() => {
+  useEffect(() => { 
     getproducts()
     getProfile()
   }, [])
