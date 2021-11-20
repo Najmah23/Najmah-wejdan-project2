@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&family=Pacifico&family=Shippori+Antique&family=Zen+Kurenaido&display=swap');
+
+.logo {
+    color: darkred;
+    font-family: 'Zen Kurenaido', sans-serif;
+
+    margin-left: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Myheader {
+    color: maroon;
+    font-family: 'Shippori Antique', sans-serif;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 55px;
+    margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.pLogin1 {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(83, 83, 83);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.unLogin {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(83, 83, 83);
 }
 
-.App-link {
-  color: #61dafb;
+.unLogin a {
+    text-decoration: gainsboro;
+    color: gray;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.butLogin {
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-left: 466px;
+    margin-top: 20px;
+    padding-left: 195px;
+    padding-right: 195px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    color: burlywood;
+    background-color: brown;
+    border: 2px solid burlywood;
+}
+
+.butLogin2 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-left: 490px;
+    margin-top: 20px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    color: burlywood;
+    background-color: brown;
+    border: 2px solid burlywood;
+}
+
+.navbar-brand {
+    text-align: center;
+    margin-top: 20px;
+    color: crimson;
+    font-family: 'Zen Kurenaido', sans-serif;
 }
