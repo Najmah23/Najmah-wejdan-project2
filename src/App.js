@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Route, Routes, useNavigate } from "react-router"
-=======
-import CarouselGroup from "./component/CarouselGroup"
->>>>>>> c792b27a6cf57242753c499c3c8f35f5005f5d6d
 import Navbar from "./component/Navbar"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
@@ -90,7 +86,6 @@ function App() {
   }
   return (
     <>
-<<<<<<< HEAD
       <ProductContext.Provider value={store}>
         <Navbar />
         <Routes>
@@ -100,10 +95,6 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </ProductContext.Provider>
-=======
-      <Navbar />
-      <CarouselGroup />
->>>>>>> c792b27a6cf57242753c499c3c8f35f5005f5d6d
     </>
   )
 }
