@@ -23,7 +23,7 @@ function App() {
       console.log(error?.response?.data)
     }
   }
-  useEffect(() => { 
+  useEffect(() => {
     getproducts()
     getProfile()
   }, [])
@@ -54,21 +54,21 @@ function App() {
         password: form.elements.password.value,
       }
       const response = await axios.post("https://vast-chamber-06347.herokuapp.com/api/user/auth", userBody)
-      const tokenPost = response.data
-      localStorage.tokenPost = tokenPost
+      const tokenProduct = response.data
+      localStorage.tokenProduct = tokenProduct
       navigate("/")
     } catch (error) {
       console.log(error.response.data)
     }
   }
   const logout = () => {
-    localStorage.removeItem("tokenPost")
+    localStorage.removeItem("tokenProduct")
   }
   const getProfile = async () => {
     try {
       const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/user/me", {
         headers: {
-          Authorization: localStorage.tokenPost,
+          Authorization: localStorage.tokenProduct,
         },
       })
       setProfile(response.data)

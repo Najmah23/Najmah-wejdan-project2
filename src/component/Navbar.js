@@ -20,13 +20,13 @@ function NavbarItem() {
               <Link className="navbar-brand" to="/">
                 HOME
               </Link>
-              {localStorage.tokenPost ? (
+              {localStorage.tokenProduct ? (
                 <Link className="navbar-brand" to="/profile">
                   PROFILE
                 </Link>
               ) : null}
 
-              {localStorage.tokenPost ? (
+              {localStorage.tokenProduct ? (
                 <Link className="navbar-brand" to="/" onClick={logout}>
                   LOGOUT
                 </Link>

@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Carousel } from "react-bootstrap"
 import ProductContext from "../utils/ProductContext"
+
 function CarouselGroup() {
   const { Products } = useContext(ProductContext)
   return (
