@@ -12,13 +12,13 @@ function Profile() {
   console.log(Items)
   return (
     <>
-    <div className="backpro">
-      <Col xs={6} md={4}>
-        <Image width="80px" src={profile.photo} className="photo" roundedCircle />
-      </Col>
-      
-      <h1 className="textPro">My account</h1>
-      <h5 className="pPro">Welcome back,{profile.firstName}!</h5>
+      <div className="backpro">
+        <Col xs={6} md={4}>
+          <Image width="80px" src={profile.photo} className="photo" roundedCircle />
+        </Col>
+
+        <h1 className="textPro">My account</h1>
+        <h5 className="pPro">Welcome back,{profile.firstName}!</h5>
       </div>
       <h1 className="Wishlist">Wishlist</h1>
       <p className="MyWishlist">My Wishlist</p>
