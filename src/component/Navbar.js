@@ -20,6 +20,9 @@ function NavbarItem() {
               <Link className="navbar-brand" to="/">
                 HOME
               </Link>
+              <Link className="navbar-brand" to="/makeup">
+                MAKEUP
+              </Link>
               {localStorage.tokenProduct ? (
                 <Link className="navbar-brand" to="/profile">
                   PROFILE

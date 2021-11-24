@@ -1,6 +1,6 @@
 import Button from "@restart/ui/esm/Button"
 import { useContext } from "react"
-import { Form, Row } from "react-bootstrap"
+import { Col, Form, Row } from "react-bootstrap"
 import ProductContext from "../utils/ProductContext"
 
 function Login() {
@@ -19,10 +19,14 @@ function Login() {
           <Form.Control type="password" name="password" required placeholder="Password" />
         </Form.Group>
       </Row>
+      <Row>
+        <Col md="4" className="mx-auto mt-3">
+          <Button variant="primary" type="submit" className="butLogin">
+            LOGIN
+          </Button>
+        </Col>
+      </Row>
 
-      <Button variant="primary" type="submit" className="butLogin">
-        LOGIN
-      </Button>
       <p className="unLogin">
         Don't have an account? <a href="/signup">Create one</a>
       </p>

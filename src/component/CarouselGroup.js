@@ -1,21 +1,25 @@
-import { useContext } from "react"
-import { Carousel } from "react-bootstrap"
-import ProductContext from "../utils/ProductContext"
-
+import { Carousel, Col, Row } from "react-bootstrap"
+import vid4 from "../images/vid4.mp4"
+import vid6 from "../images/vid6.mp4"
+import vid7 from "../images/vid7.mp4"
 function CarouselGroup() {
-  const { Products } = useContext(ProductContext)
+
   return (
-    <Carousel className="d-flex justify-content-center w-80 mx-auto mt-5" variant="dark">
-      {Products.map(product => (
-        <Carousel.Item>
-          <img className="d-block  w-40" src={product.image_link} />
-          <Carousel.Caption>
-            <h4 className="w-60 mx-2">{product.name}</h4>
-            <p>{product.brand}</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <Row>
+      <Col md="8" className="mx-auto mt-5 w-80">
+        <Carousel>
+          <Carousel.Item>
+            <video className="d-block w-50 mx-auto" src={vid7} autoPlay muted loop />
+          </Carousel.Item>
+          <Carousel.Item>
+            <video className="d-block w-50 mx-auto" src={vid6} autoPlay muted loop />
+          </Carousel.Item>
+          <Carousel.Item>
+            <video className="d-block w-50 mx-auto" src={vid4} autoPlay muted loop />
+          </Carousel.Item>
+        </Carousel>
+      </Col>
+    </Row>
   )
 }
 export default CarouselGroup

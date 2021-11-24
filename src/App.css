@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700&family=Pacifico&family=Shippori+Antique&family=Zen+Kurenaido&display=swap');
 
-.logo {
-    color: darkred;
-    font-family: 'Zen Kurenaido', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.logo {
+    color: cadetblue;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 45px;
     margin-left: 50px;
 }
 
 .Myheader {
-    color: maroon;
+    color: cadetblue;
     font-family: 'Shippori Antique', sans-serif;
     font-size: 23px;
     text-align: center;
@@ -19,51 +25,240 @@
 
 .pLogin1 {
     text-align: center;
-    margin-top: 50px;
-    color: rgb(83, 83, 83);
+    margin-top: 30px;
+    color: black;
+
 }
 
 .unLogin {
     text-align: center;
     margin-top: 20px;
-    color: rgb(83, 83, 83);
+    color: black;
 }
 
 .unLogin a {
     text-decoration: gainsboro;
-    color: gray;
+    color: cadetblue;
 
 }
 
 .butLogin {
     font-family: 'Zen Kurenaido', sans-serif;
-    margin-left: 466px;
-    margin-top: 20px;
-    padding-left: 195px;
-    padding-right: 195px;
+    width: 100%;
     padding-top: 9px;
     padding-bottom: 9px;
     color: burlywood;
-    background-color: brown;
+    background-color: cadetblue;
     border: 2px solid burlywood;
+
 }
 
-.butLogin2 {
+.butSignup {
     font-family: 'Zen Kurenaido', sans-serif;
-    margin-left: 490px;
-    margin-top: 20px;
-    padding-left: 130px;
-    padding-right: 130px;
+    width: 100%;
     padding-top: 9px;
     padding-bottom: 9px;
     color: burlywood;
-    background-color: brown;
+    background-color: cadetblue;
     border: 2px solid burlywood;
+
+
 }
 
 .navbar-brand {
     text-align: center;
     margin-top: 20px;
-    color: crimson;
+    color: cadetblue;
+    font-family: "Lobster"
+}
+
+body {
+    background: url("./images/img17.jpg") center/cover no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+
+
+
+}
+
+.Cardfount {
     font-family: 'Zen Kurenaido', sans-serif;
+    color: darkred;
+    font-size: 20px;
+    margin-right: 7px;
+
+
+}
+
+.Cardfount:hover {
+    background-color: cadetblue;
+    transform: top;
+
+
+}
+
+.textPro {
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-left: 280px;
+    font-size: 35px;
+    color: darkred;
+
+
+
+}
+
+.pPro {
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-left: 280px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: darkred;
+
+
+}
+
+.Wishlist {
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: darkred;
+
+
+
+}
+
+.MyWishlist {
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    color: darkred;
+
+
+}
+
+.MyWishlist2 {
+    margin-left: 300px;
+    color: darkslategrey;
+
+
+
+
+}
+
+.emailicon {
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-left: 600px;
+    margin-bottom: -5px;
+    color: darkred;
+}
+
+.photo {
+    margin-left: 150px;
+    margin-top: 50px;
+
+}
+
+
+.images {
+    padding-top: 70px;
+
+}
+
+
+.img24 {
+
+    padding-top: 70px;
+    width: 405px;
+    margin-left: 10px;
+
+}
+
+.img25 {
+    width: 408px;
+    margin-left: 50px;
+
+}
+
+.img30 {
+    width: 408px;
+    margin-left: 50px;
+}
+
+.img27 {
+    width: 380px;
+    margin-right: 20px;
+}
+
+.img22 {
+    width: 380px;
+}
+
+.homediv {
+    background-color: cadetblue;
+    position: absolute;
+    min-height: 110vh;
+    width: 100%;
+
+
+}
+
+.modle {
+    font-family: 'Zen Kurenaido', sans-serif;
+
+}
+
+.divitem {
+    margin-right: 400px;
+    width: 500px;
+    padding-left: 100px;
+}
+
+.icon {
+    background-color: wheat;
+    margin-left: 225px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.bouttn {
+    display: inline-block;
+    background-color: darksalmon;
+    padding: 5px;
+    border: 2px solid gray;
+    color: gray;
+    margin-left: 120px;
+}
+
+.bouttn2 {
+    display: inline-block;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid cadetblue;
+    color: cadetblue;
+    margin-left: 600px;
+    letter-spacing: 1px;
+    font-weight: 300px;
+    margin-top: 30px;
+    transition: 0.7s;
+
+}
+
+.bouttn2:hover {
+    letter-spacing: 6px;
+    color: blue;
+
+}
+
+.backpro {
+    background-color: cornflowerblue;
+    margin-top: 20px;
+    margin-right: 850px;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }

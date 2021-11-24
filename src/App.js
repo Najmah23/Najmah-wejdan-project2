@@ -1,16 +1,19 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Route, Routes, useNavigate } from "react-router"
-import Navbar from "./component/Navbar"
+import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import ProductContext from "./utils/ProductContext"
 import "./App.css"
 import Profile from "./pages/Profile"
+import Makeup from "./pages/Makeup"
+import Footer from "./components/Footer"
 
 function App() {
   const [Products, setProduct] = useState([])
+  const [Items, setItems] = useState([])
   const [profile, setProfile] = useState(null)
 
   const navigate = useNavigate()
@@ -23,9 +26,13 @@ function App() {
       console.log(error?.response?.data)
     }
   }
+
   useEffect(() => {
     getproducts()
-    getProfile()
+    getItems()
+    if (localStorage.tokenProduct) {
+      getProfile()
+    }
   }, [])
 
   const signup = async e => {
@@ -56,13 +63,35 @@ function App() {
       const response = await axios.post("https://vast-chamber-06347.herokuapp.com/api/user/auth", userBody)
       const tokenProduct = response.data
       localStorage.tokenProduct = tokenProduct
-      navigate("/")
+      navigate("/makeup")
     } catch (error) {
       console.log(error.response.data)
     }
   }
   const logout = () => {
     localStorage.removeItem("tokenProduct")
+  }
+
+  const addfavorite = async productId => {
+    try {
+      const product = Products.find(product => product.id === productId)
+      const productBody = {
+        title: product.brand,
+        description: product.description,
+        image: product.image_link,
+      }
+      console.log(productBody)
+      console.log(product)
+      await axios.post("https://vast-chamber-06347.herokuapp.com/api/v2/makeup-984/items", productBody, {
+        headers: {
+          Authorization: localStorage.tokenProduct,
+        },
+      })
+      getItems()
+      navigate("/profile")
+    } catch (error) {
+      console.log(error.response.data)
+    }
   }
   const getProfile = async () => {
     try {
@@ -71,9 +100,32 @@ function App() {
           Authorization: localStorage.tokenProduct,
         },
       })
+      console.log(response.data)
       setProfile(response.data)
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error?.response?.data)
+    }
+  }
+  const getItems = async () => {
+    try {
+      const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/v2/makeup-984/items")
+      setItems(response.data)
+    } catch (error) {
+      console.log(error?.response?.data)
+    }
+  }
+  const deleteProduct = async productId => {
+    console.log(productId)
+    try {
+      await axios.delete(`https://vast-chamber-06347.herokuapp.com/api/v2/makeup-984/items/${productId}`, {
+        headers: {
+          Authorization: localStorage.tokenProduct,
+        },
+      })
+
+      getItems()
+    } catch (error) {
+      console.log(error?.response?.data)
     }
   }
 
@@ -83,6 +135,9 @@ function App() {
     login: login,
     logout: logout,
     profile: profile,
+    addfavorite: addfavorite,
+    Items: Items,
+    deleteProduct: deleteProduct,
   }
   return (
     <>
@@ -93,6 +148,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/makeup" element={<Makeup />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
       </ProductContext.Provider>
     </>
