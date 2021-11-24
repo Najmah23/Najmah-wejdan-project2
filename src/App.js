@@ -87,6 +87,7 @@ function App() {
         },
       })
       getItems()
+      getProfile()
       navigate("/profile")
     } catch (error) {
       console.log(error.response.data)
