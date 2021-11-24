@@ -9,7 +9,6 @@ import ProductContext from "./utils/ProductContext"
 import "./App.css"
 import Profile from "./pages/Profile"
 import Makeup from "./pages/Makeup"
-import Footer from "./components/Footer"
 
 function App() {
   const [Products, setProduct] = useState([])
@@ -149,7 +148,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/makeup" element={<Makeup />} />
-          <Route path="/footer" element={<Footer />} />
         </Routes>
       </ProductContext.Provider>
     </>
