@@ -1,6 +1,7 @@
 import Button from "@restart/ui/esm/Button"
 import { useContext } from "react"
 import { Col, Form, Row } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import ProductContext from "../utils/ProductContext"
 
 function Login() {
@@ -28,7 +29,7 @@ function Login() {
       </Row>
 
       <p className="unLogin">
-        Don't have an account? <a href="/signup">Create one</a>
+        Don't have an account? <Link to="/signup">Create one</Link>
       </p>
     </Form>
   )

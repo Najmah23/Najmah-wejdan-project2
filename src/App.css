@@ -86,20 +86,20 @@ body {
     color: darkred;
     font-size: 20px;
     margin-right: 7px;
+    transition: 1s;
 
 
 }
 
 .Cardfount:hover {
     background-color: cadetblue;
-    transform: top;
+    transform: scale(1.1);
 
 
 }
 
 .textPro {
     font-family: 'Zen Kurenaido', sans-serif;
-    margin-left: 280px;
     font-size: 35px;
     color: darkred;
 
@@ -107,11 +107,17 @@ body {
 
 }
 
+.textPro1 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 35px;
+    color: darkred;
+    text-align: center;
+    margin-top: 200px;
+
+}
+
 .pPro {
     font-family: 'Zen Kurenaido', sans-serif;
-    margin-left: 280px;
-    margin-top: 20px;
-    margin-bottom: 60px;
     color: darkred;
 
 
@@ -120,6 +126,7 @@ body {
 .Wishlist {
     font-family: 'Zen Kurenaido', sans-serif;
     text-align: center;
+    margin-top: 20px;
     font-size: 35px;
     margin-bottom: 20px;
     color: darkred;
@@ -140,7 +147,7 @@ body {
 
 .MyWishlist2 {
     margin-left: 300px;
-    color: darkslategrey;
+    color: black;
 
 
 
@@ -163,23 +170,40 @@ body {
 
 .images {
     padding-top: 70px;
+    transition: 1s;
 
 }
 
+
+
+
+
+.images:hover {
+
+    transform: scale(1.1);
+
+
+}
 
 .img24 {
 
     padding-top: 70px;
     width: 405px;
     margin-left: 10px;
-
+    transition: 1s;
 }
+
+.img24:hover {
+    transform: scale(1.1);
+}
+
 
 .img25 {
     width: 408px;
     margin-left: 50px;
 
 }
+
 
 .img30 {
     width: 408px;
@@ -254,11 +278,3 @@ body {
     color: blue;
 
 }
-
-/* .backpro {
-    background-color: cornflowerblue;
-    margin-top: 20px;
-    margin-right: 850px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-} */

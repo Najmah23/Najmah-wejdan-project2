@@ -10,7 +10,6 @@ function Makeup() {
   return (
     <>
       <CardProduct handleShow={handleShow} />
-
       <>
         <Modal show={show} onHide={handleClose} className="modle">
           <Modal.Header closeButton>

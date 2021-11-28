@@ -6,16 +6,18 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import ProductContext from "./utils/ProductContext"
-import "./App.css"
 import Profile from "./pages/Profile"
 import Makeup from "./pages/Makeup"
+import "./App.css"
+
 
 function App() {
   const [Products, setProduct] = useState([])
   const [Items, setItems] = useState([])
   const [profile, setProfile] = useState(null)
-
   const navigate = useNavigate()
+
+  //-------getproduct
 
   const getproducts = async () => {
     try {
@@ -25,7 +27,7 @@ function App() {
       console.log(error?.response?.data)
     }
   }
-
+  //-----------useeffect
   useEffect(() => {
     getproducts()
     getItems()
@@ -33,6 +35,8 @@ function App() {
       getProfile()
     }
   }, [])
+
+  // ----------signup
 
   const signup = async e => {
     e.preventDefault()
@@ -51,6 +55,8 @@ function App() {
       console.log(error?.response?.data)
     }
   }
+  // ----------login
+
   const login = async e => {
     e.preventDefault()
     try {
@@ -67,20 +73,22 @@ function App() {
       console.log(error.response.data)
     }
   }
+
+  // ----------logout
+
   const logout = () => {
     localStorage.removeItem("tokenProduct")
   }
+  // ----------addfavorite
 
   const addfavorite = async productId => {
     try {
       const product = Products.find(product => product.id === productId)
       const productBody = {
         title: product.brand,
-        description: product.description,
         image: product.image_link,
       }
-      console.log(productBody)
-      console.log(product)
+      // -----api privete
       await axios.post("https://vast-chamber-06347.herokuapp.com/api/v2/makeup-984/items", productBody, {
         headers: {
           Authorization: localStorage.tokenProduct,
@@ -93,6 +101,8 @@ function App() {
       console.log(error.response.data)
     }
   }
+  // ----------getprofile
+
   const getProfile = async () => {
     try {
       const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/user/me", {
@@ -100,12 +110,13 @@ function App() {
           Authorization: localStorage.tokenProduct,
         },
       })
-      console.log(response.data)
       setProfile(response.data)
     } catch (error) {
       console.log(error?.response?.data)
     }
   }
+  // ----------getItem
+
   const getItems = async () => {
     try {
       const response = await axios.get("https://vast-chamber-06347.herokuapp.com/api/v2/makeup-984/items")
@@ -114,6 +125,8 @@ function App() {
       console.log(error?.response?.data)
     }
   }
+  // ----------delete
+
   const deleteProduct = async productId => {
     console.log(productId)
     try {
@@ -128,6 +141,7 @@ function App() {
       console.log(error?.response?.data)
     }
   }
+  // ----------store
 
   const store = {
     Products: Products,

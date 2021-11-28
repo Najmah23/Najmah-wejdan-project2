@@ -1,11 +1,10 @@
 import Button from "@restart/ui/esm/Button"
 import { useContext } from "react"
 import { Col, Form, Row } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import ProductContext from "../utils/ProductContext"
-
 function Signup() {
   const { signup } = useContext(ProductContext)
-
   return (
     <Form onSubmit={signup}>
       <h1 className="Myheader">Register</h1>
@@ -35,7 +34,6 @@ function Signup() {
           <Form.Control type="url" name="photo" required placeholder="photo" />
         </Form.Group>
       </Row>
-
       <Row>
         <Col md="4" className="mx-auto mt-3">
           <Button type="submit" className="butSignup">
@@ -43,12 +41,10 @@ function Signup() {
           </Button>
         </Col>
       </Row>
-
       <p className="unLogin">
-        Already have an account? <a href="/login">Sign In</a>
+        Already have an account? <Link to="/login">Sign In</Link>
       </p>
     </Form>
   )
 }
-
 export default Signup
